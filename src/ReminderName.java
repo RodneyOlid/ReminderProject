@@ -3,7 +3,7 @@ public class ReminderName {
     public static void setName(String name){
         reminderName = name;
     }
-    private static String getName(){
+    public static String getName(){
         return reminderName;
     }
 }

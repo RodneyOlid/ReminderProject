@@ -3,7 +3,7 @@ public class ReminderPrio {
     public static void setPriority(String prio){
         reminderPriority = prio.equals("yes");
     }
-    private static boolean getPriority(){
+    public static boolean getPriority(){
         return reminderPriority;
     }
 }
