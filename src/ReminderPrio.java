@@ -1,9 +1,9 @@
 public class ReminderPrio {
     public static boolean reminderPriority = false;
-    public static void setPriority(boolean prio){
-        reminderPriority = prio;
+    public static void setPriority(String prio){
+        reminderPriority = prio.equals("yes");
     }
-    protected static boolean getPriority(){
+    public static boolean getPriority(){
         return reminderPriority;
     }
 }

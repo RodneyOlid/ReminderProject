@@ -5,7 +5,7 @@ public class ReminderDate {
         reminderMonth = month;
         reminderDay = day;
     }
-    protected static String getDate(){
+    public static String getDate(){
         return(reminderMonth + "/" + reminderDay);
     }
 }

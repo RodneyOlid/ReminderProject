@@ -4,7 +4,7 @@ public class ReminderInfo {
     public static void setInfo(String info){
         reminderInfo = info;
     }
-    protected static String getInfo(){
+    public static String getInfo(){
         return reminderInfo;
     }
 }
