@@ -2,7 +2,8 @@ import java.util.Scanner;
 import java.util.Arrays;
 public class Menu {
     public static void menuPrompt() {
-        ReminderObj[] reminderList = new ReminderObj[0];
+        ReminderObj[] reminderList = {};
+        ReminderObj[] updateList = {};
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to the Reminder App");
         System.out.println("What would you like to do?");
@@ -18,12 +19,18 @@ public class Menu {
                     // view reminders
                     if(reminderList.length == 0){
                         System.out.println("You have no reminders set.");
+                    }else{
+                        for(int i = 0;i < reminderList.length;i++){
+                            reminderList[i].display();
+                        }
                     }
                     break;
                 case 2:
                     // add reminders
-                    ReminderObj newList[] = Arrays.copyOf(reminderList, reminderList.length + 1);
-//                    newList[reminderList.length] = CreateReminder.setReminder();
+                    updateList = Arrays.copyOf(reminderList, reminderList.length + 1);
+                    updateList[reminderList.length] = CreateReminder.setReminder();
+                    reminderList = Arrays.copyOf(updateList, updateList.length);
+
                     break;
                 case 3:
                     // delete reminder
