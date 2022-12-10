@@ -34,9 +34,33 @@ public class Menu {
                     break;
                 case 3:
                     // delete reminder
+                    if(reminderList.length == 0){
+                        System.out.println("You have no reminders set.");
+                    }else{
+                        for(int i = 0;i < reminderList.length;i++){
+                            reminderList[i].display();
+                        }
+                    }
+                    System.out.println("Which reminder do you want to Delete?");
+                    int delete = input.nextInt();
+                    updateList = DeleteReminder.DeleteReminder(updateList, delete);
+
+                    reminderList = Arrays.copyOf(updateList, updateList.length);
                     break;
                 case 4:
                     // edit reminder
+                    if(reminderList.length == 0){
+                        System.out.println("You have no reminders set.");
+                    }else{
+                        for(int i = 0;i < reminderList.length;i++){
+                            reminderList[i].display();
+                        }
+                    }
+                    System.out.println("Which reminder do you want to Edit?");
+                    int edit = input.nextInt();
+                    EditReminder.EditReminder(updateList[edit-1]);
+
+                    reminderList = Arrays.copyOf(updateList, updateList.length);
                     break;
             }
             System.out.println("0. Quit\n1. View reminders\n2. Add new reminder\n3. Delete reminder\n4. Edit reminder");

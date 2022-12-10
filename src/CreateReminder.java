@@ -10,15 +10,14 @@ public class CreateReminder {
         name = input.nextLine();
         System.out.println("Description of your reminder: ");
         info = input.nextLine();
-        System.out.println("When is it due? Enter month:  ");
+        System.out.println("When is it due? Enter month(1-12):  ");
         month = input.nextInt();
         System.out.println("Enter Day: ");
         day = input.nextInt();
         System.out.println("Is this reminder high or low priority(Enter high or low): ");
         prio = input.next();
         priority = prio.equals("high");
-        ReminderObj reminder = new ReminderObj(name, month, day, priority, info);
-        reminder.display();
-        return reminder;
+
+        return new ReminderObj(name, month, day, priority, info);
     }
 }
