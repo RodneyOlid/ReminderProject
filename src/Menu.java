@@ -17,13 +17,7 @@ public class Menu {
             switch (choice) {
                 case 1:
                     // view reminders
-                    if(reminderList.length == 0){
-                        System.out.println("You have no reminders set.");
-                    }else{
-                        for(int i = 0;i < reminderList.length;i++){
-                            reminderList[i].display();
-                        }
-                    }
+                   ViewReminder.displayReminders(reminderList);
                     break;
                 case 2:
                     // add reminders
@@ -34,13 +28,7 @@ public class Menu {
                     break;
                 case 3:
                     // delete reminder
-                    if(reminderList.length == 0){
-                        System.out.println("You have no reminders set.");
-                    }else{
-                        for(int i = 0;i < reminderList.length;i++){
-                            reminderList[i].display();
-                        }
-                    }
+                    ViewReminder.displayReminders(reminderList);
                     System.out.println("Which reminder do you want to Delete?");
                     int delete = input.nextInt();
                     updateList = DeleteReminder.DeleteReminder(updateList, delete);
@@ -49,13 +37,7 @@ public class Menu {
                     break;
                 case 4:
                     // edit reminder
-                    if(reminderList.length == 0){
-                        System.out.println("You have no reminders set.");
-                    }else{
-                        for(int i = 0;i < reminderList.length;i++){
-                            reminderList[i].display();
-                        }
-                    }
+                    ViewReminder.displayReminders(reminderList);
                     System.out.println("Which reminder do you want to Edit?");
                     int edit = input.nextInt();
                     EditReminder.EditReminder(updateList[edit-1]);
