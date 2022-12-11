@@ -1,4 +1,7 @@
-
+/*
+DeleteReminder class with DeleteReminder method. The parameters it takes is an object array and an integer. Deletes
+the object in the array at a certain position and returns a new object array list.
+ */
 public class DeleteReminder {
 
     public static ReminderObj[] DeleteReminder(ReminderObj[] updateList, int delete) {

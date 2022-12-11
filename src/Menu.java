@@ -1,3 +1,7 @@
+/*
+Menu class and menuPrompt method. The main menu for the reminder app and allows the user to pick from 5 different
+options. Loops using a while loop until the user presses 0 to end the program.
+ */
 import java.util.Scanner;
 import java.util.Arrays;
 public class Menu {

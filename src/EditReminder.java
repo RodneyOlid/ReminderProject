@@ -1,3 +1,7 @@
+/*
+EditReminder Class with EditReminder method. The parameter is an object from an object array and asks the user the same
+series of question to edit the reminder information. Returns an edited object.
+ */
 import java.util.Scanner;
 public class EditReminder{
 
@@ -18,8 +22,16 @@ public class EditReminder{
         updateList.setInfo(editInfo);
         System.out.println("New Reminder Month(1-12): ");
         editMonth = input.nextInt();
-        System.out.println("New Reminder Day: ");
+        while(editMonth > 12 || editMonth < 0){
+            System.out.println("Enter a month between 1-12: ");
+            editMonth = input.nextInt();
+        }
+        System.out.println("New Reminder Day(1-31): ");
         editDay = input.nextInt();
+        while(editDay > 31 || editDay < 0){
+            System.out.println("Enter a day between 1-31: ");
+            editDay = input.nextInt();
+        }
         updateList.setDate(editMonth, editDay);
         System.out.println("New Priority(high or low): ");
         editPrio = input.next();
